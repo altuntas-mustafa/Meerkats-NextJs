@@ -29,14 +29,19 @@ const getData = async () => {
 
 export default async function Home() {
   const data : any = await getData()
-  console.log(data)
   return (
     <main>
+      <>
       <h1>Products</h1>
-      {/* {data.mug} */}
-      {/* <p>{JSON.stringify(data.mug)}</p> */}
-      <Link href='/api/products'>Products</Link>
-      
+      {data.map((product:any, index:number)=>{ 
+      return <li key={index}>
+        <Link href={`/api/${product.fields.item}`}>{product.fields.item}</Link>
+        </li>
+        // return <p>{item.fields.item}</p>
+      })}
+
+      </>
+       
     </main>
   )
 }
