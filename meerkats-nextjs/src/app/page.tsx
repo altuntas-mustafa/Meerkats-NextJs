@@ -1,4 +1,5 @@
 import { Inter } from 'next/font/google'
+import Link from 'next/link'
 import styles from './page.module.css'
 const contentful = require('contentful')
 
@@ -33,7 +34,8 @@ export default async function Home() {
     <main>
       <h1>Products</h1>
       {/* {data.mug} */}
-      <p>{JSON.stringify(data.mug)}</p>
+      {/* <p>{JSON.stringify(data.mug)}</p> */}
+      <Link href='/api/products'>Products</Link>
       
     </main>
   )
