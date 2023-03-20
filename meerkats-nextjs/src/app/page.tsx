@@ -10,19 +10,14 @@ const client = contentful.createClient({
   environment: 'master', // defaults to 'master' if not set
   accessToken: 'LD3cBN2QhxQwzRhvuBJihPMfUu5dQ2Qgde_u3flr8FM'
 })
-// const getData = async () => {
-//   await client.getEntries()
-//     .then((response: any) => {
-//       console.log('hello', response.items[0].fields)
-//       return response.items
-//       })
-//     .catch(console.error)
-// }
+
 const getData = async () => {
   try {
-    const response = await client.getEntries()
+    const response = await client.getEntries({
+      content_type: 'goodies'
+    })
     // console.log('hello', response.items[0].fields)
-    return response.items[0].fields
+    return response.items
   } catch (error) {
     console.error(error)
     return null
@@ -30,9 +25,10 @@ const getData = async () => {
 }
 
 
+
 export default async function Home() {
   const data : any = await getData()
-  console.log(data.tShirt)
+  console.log(data)
   return (
     <main>
       <h1>Products</h1>
