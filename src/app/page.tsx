@@ -39,6 +39,7 @@ export default async function Home() {
                       pathname: `/api/${product.fields.item}`,
                       query: product.fields,
                     }}
+                    // as ={`/api/${product.fields.item}`}
                   >
                      {product.fields.item}
                   </Link>
