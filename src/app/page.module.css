@@ -6,6 +6,26 @@
   padding: 6rem;
   min-height: 100vh;
 }
+.products {
+  /* border: 0.1vw solid red; */
+  width: 15vw;
+  padding: 1vh 1vw;
+  background-color: black;
+  color: white;
+  list-style: none;
+  text-align: center;
+}
+.productButton {
+  margin-top: 1vh;
+  padding: 1vh 1vw;
+  background-color: gray; 
+  border-radius: 10px;
+  color: white;
+}
+.productButton:hover {
+  color: blue;
+  cursor: pointer;
+}
 
 .description {
   display: inherit;

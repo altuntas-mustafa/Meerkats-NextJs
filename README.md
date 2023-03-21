@@ -1,35 +1,38 @@
-# Meerkats-NextJs
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-salt-jsfs-jam-blog
-A. Scenario
-In this lab you will get your hands dirty with the JAM Stack, a very modern way of building a website, and get a first site up that are using J(avaScript) A(PIs) and M(arkup).
+## Getting Started
 
-B. What you will be working on today
-Today you will be building a products app using some of the most common and popular tools:
+First, run the development server:
 
-Next.js - to build/generate the site
-Vercel - to deploy the site
-Contentful - to store and deliver the content
-C. Lab instructions
-Create a Next.js app using the Next starter create-next-app
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-npx create-next-app@latest
-Answer Yes to TypeScript and ESLint
-Inspect the codebase and try to understand how it's setup.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Create your own GitHub repo and push this code to it.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Create a Contentful account.
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-Create a "products" page to display a list of products.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This page should display a list of products from Contentful. You need create a new Content Model and add content for this to work.
-You should be able to click on a product to be redirected to a product page.
-Create an account on Vercel and deploy your application by linking to your GitHub repo.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-There are many good articles out there that describes everything in this setup. Check this one out for example
+## Learn More
 
-Please also search for some of your own, maybe you learn better from YouTube tutorials for example.
+To learn more about Next.js, take a look at the following resources:
 
-Good luck and have fun!
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
