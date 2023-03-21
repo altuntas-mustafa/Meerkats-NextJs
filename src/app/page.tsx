@@ -7,7 +7,7 @@ const contentful = require("contentful");
 
 const client = contentful.createClient({
   space: "9yj1xgb6zgkj",
-  environment: "master", 
+  environment: "master",
   accessToken: "LD3cBN2QhxQwzRhvuBJihPMfUu5dQ2Qgde_u3flr8FM",
 });
 
@@ -33,10 +33,18 @@ export default async function Home() {
           {data.map((product: any, index: number) => {
             return (
               <li key={index}>
-                <button className={styles.productButton} >
-                  <Link href={`/api/${product.fields.item}`}>
-                    {product.fields.item}
+                <button className={styles.productButton}>
+                  <Link
+                    href={{
+                      pathname: `/api/${product.fields.item}`,
+                      query: product.fields,
+                    }}
+                  >
+                     {product.fields.item}
                   </Link>
+                  {/* <Link href={`/api/${product.fields.item}`}>
+                    {product.fields.item}
+                  </Link> */}
                 </button>
               </li>
             );
